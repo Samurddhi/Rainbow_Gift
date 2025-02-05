@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Details Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ff9a9e, #d8597b);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        .form-container {
+            background: white;
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+        h2 {
+            color: #d63384;
+            margin-bottom: 15px;
+        }
+        .form-group {
+            position: relative;
+            margin-bottom: 18px;
+            text-align: left;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 12px 3px 12px 12px;
+            border: 2px solid #ff85a2;
+            border-radius: 8px;
+            outline: none;
+            font-size: 14px;
+        }
+        .form-group label {
+            position: absolute;
+            left: 12px;
+            top: 14px;
+            color: #d63384;
+            transition: 0.3s;
+            font-size: 14px;
+        }
+        .form-group input:focus + label,
+        .form-group input:not(:placeholder-shown) + label,
+        .form-group select:focus + label,
+        .form-group select:not(:placeholder-shown) + label {
+            top: -10px;
+            left: 10px;
+            font-size: 12px;
+            color: #ff4081;
+            background: white;
+            padding: 2px 5px;
+            border-radius: 5px;
+        }
+        .form-group i {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #d63384;
+            font-size: 18px;
+        }
+        .btn {
+            background: #ff4081;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background: #e91e63;
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Delivery Details</h2>
+        <form id="deliveryForm">
+            <div class="form-group">
+                <input type="text" id="name" placeholder=" " required>
+                <label for="name">Full Name</label>
+                <i class="fas fa-user"></i>
+            </div>
+            <div class="form-group">
+                <input type="text" id="address" placeholder=" " required>
+                <label for="address">Address</label>
+                <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="form-group">
+                <input type="text" id="city" placeholder=" " required>
+                <label for="city">City</label>
+                <i class="fas fa-city"></i>
+            </div>
+            <div class="form-group">
+                <input type="text" id="state" placeholder=" " required>
+                <label for="state">State</label>
+                <i class="fas fa-flag"></i>
+            </div>
+            <div class="form-group">
+                <input type="text" id="zipcode" placeholder=" " required>
+                <label for="zipcode">Zip Code</label>
+                <i class="fas fa-envelope"></i>
+            </div>
+            <div class="form-group">
+                <input type="text" id="phone" placeholder=" " required>
+                <label for="phone">Phone Number</label>
+                <i class="fas fa-phone"></i>
+            </div>
+            <div class="form-group">
+                <input type="email" id="email" placeholder=" " required>
+                <label for="email">Email Address</label>
+                <i class="fas fa-envelope-open"></i>
+            </div>
+            <div class="form-group">
+                <select id="deliveryMethod" required>
+                    <option value="" disabled selected>Select Delivery Method</option>
+                    <option value="standard">Standard Delivery</option>
+                    <option value="express">Express Delivery</option>
+                </select>
+                <label for="deliveryMethod">Delivery Method</label>
+                <i class="fas fa-truck"></i>
+            </div>
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById('deliveryForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Delivery details submitted successfully!');
+        });
+    </script>
+</body>
+</html>

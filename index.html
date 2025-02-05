@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect Page</title>
+   <style>
+    /* style.css */
+body {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+    color: black;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+img {
+
+    size: 1.2em;
+}
+
+   </style>
+    <script>// script.js
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(function() {
+                // Redirect to a new page after 5 seconds
+                window.location.href = 'home.html';  // Change 'newpage.html' to the desired URL
+            }, 2000); // 5000 milliseconds = 5 seconds
+        });
+        </script>
+</head>
+<body>
+    <div class="container">
+               <img src="bye-bye-love-you.gif">
+    </div>
+</body>
+</html>
